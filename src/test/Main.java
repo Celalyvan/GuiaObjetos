@@ -2,12 +2,13 @@ package test;
 
 import dominio.Banco;
 import dominio.Employee;
+import dominio.Hora;
 import dominio.Item;
 
 import java.util.Scanner;
 
 public class Main {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws InterruptedException {
         Scanner input = new Scanner(System.in);
         int opcion;
 
@@ -112,6 +113,16 @@ public class Main {
 */
 
         //Ejercicio 5
+
+        Hora relos= new Hora(14,4,22);
+
+        for (int i = 0; i < 3600; i++) {
+            relos=relos.increase1Second(relos);
+            System.out.println(relos.toString());
+
+            Thread.sleep(1000);
+        }
+
 
     }
 
