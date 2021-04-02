@@ -1,7 +1,7 @@
 package test;
 
 import dominio.Employee;
-import dominio.Rectangle;
+import dominio.Item;
 
 import java.util.Scanner;
 
@@ -33,7 +33,7 @@ public class Main {
 
         System.out.println("rectangulusPedorrus = " + rectangulusPedorrus);
 */
-
+/*      Ejercicio 2
         Employee arrayEmployee[] ={new Employee("Carlos","Guitierrez", 25000.0, 23456345),
                 new Employee("Ana", "Sánchez", 27500.0, 34234123)};
         int opcion;
@@ -66,6 +66,18 @@ public class Main {
         System.out.println("1.mostrar empleados");
         System.out.println("2.modificar salarios");
         System.out.println("\n\t0.salir");
+*/
+/*      //Ejercicio 3     //preguntar como aplicariamos impuestos al total
+        Item arrayItems[] = {new Item("coca", 12, 85.0),
+                new Item("papas 45g", 40, 65.35), new Item("DRF", 8, 25)};
+
+        System.out.println("");
+        for (Item local :
+                arrayItems) {
+            System.out.println(local.toString());
+        }
+*/
+
 
     }
 
