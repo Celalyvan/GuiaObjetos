@@ -1,5 +1,6 @@
 package test;
 
+import dominio.Banco;
 import dominio.Employee;
 import dominio.Item;
 
@@ -8,6 +9,7 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
+        int opcion;
 
 /*      //EJERCICIO 1
 
@@ -36,7 +38,7 @@ public class Main {
 /*      Ejercicio 2
         Employee arrayEmployee[] ={new Employee("Carlos","Guitierrez", 25000.0, 23456345),
                 new Employee("Ana", "Sánchez", 27500.0, 34234123)};
-        int opcion;
+
 
         menu();
 
@@ -62,10 +64,6 @@ public class Main {
 
     }
 
-    public static void menu(){
-        System.out.println("1.mostrar empleados");
-        System.out.println("2.modificar salarios");
-        System.out.println("\n\t0.salir");
 */
 /*      //Ejercicio 3     //preguntar como aplicariamos impuestos al total
         Item arrayItems[] = {new Item("coca", 12, 85.0),
@@ -78,45 +76,94 @@ public class Main {
         }
 */
 
+/*        //Ejercicio 4
+        System.out.println("\n\n\t\tBienvenido a bancos Tesacolaplata");
+
+        System.out.println("\nCreando nueva cuenta");
+        System.out.println("\n\ningrese su nombre");
+        String localName = input.nextLine();
+
+        System.out.println("\ningrese un monto de apertura");
+        double localBalance = input.nextDouble();
+
+        Banco cuentaLocal = new Banco(localName, localBalance);
+        System.out.println("\nCuenta creada, ¡bienvenido a Tesacolaplata! :)");
+
+        do {
+            menu2();
+            System.out.println("\n Que operacion desea realizar?");
+            opcion = input.nextInt();
+
+            switch (opcion) {
+                case 1:
+                    cuentaLocal.credito();
+                    break;
+
+                case 2:
+                    cuentaLocal.debito();
+                    break;
+
+                default:
+                    if (opcion!=0)
+                    System.out.println("opcion no valida");
+                    break;
+            }
+        } while (opcion != 0);
+*/
+
+        //Ejercicio 5
 
     }
 
-    public static void printArrayEmployees(Employee array[]){
-       /* for (Employee local :
+
+    public static void printArrayEmployees(Employee array[]) {
+        for (Employee local :
                 array) {
             System.out.println(local.toString());
-        }*/
-        for (int i =0; i< array.length; i++)
-            System.out.println(array[i].toString());
+        }
     }
 
-    public static void modifySalary(Employee employees[]){
+    public static void modifySalary(Employee employees[]) {
         System.out.println("DNI del empleado: ");
 
         Scanner input = new Scanner(System.in);
-        long localDNI= input.nextLong();
+        long localDNI = input.nextLong();
 
         Employee localEmployee = null;
 
-        int i=0;
-        while ( i< employees.length){
+        int i = 0;
+        while (i < employees.length) {
 
-            if (employees[i].getDni()==localDNI)
-                localEmployee =employees[i];
+            if (employees[i].getDni() == localDNI)
+                localEmployee = employees[i];
 
             i++;
         }
 
-        if (localEmployee!=null){
+        if (localEmployee != null) {
             System.out.println("ingrese el porcentaje del salario");
             updateySalary(localEmployee, input.nextFloat());
         }
 
     }
 
-    public static void updateySalary(Employee employee, float percentage){ //no deberia de estar en la clase empleado, no?
-        double localSalary=employee.getSalary()+ employee.getSalary() * (percentage/100);
+    public static void updateySalary(Employee employee, float percentage) { //no deberia de estar en la clase empleado, no?
+        double localSalary = employee.getSalary() + employee.getSalary() * (percentage / 100);
 
         employee.setSalary(localSalary);
     }
+
+    public static void menu() {
+        System.out.println("1.mostrar empleados");
+        System.out.println("2.modificar salarios");
+        System.out.println("\n\t0.salir");
+    }
+
+    public static void menu2() {
+        System.out.println("1.Operacion de Credito");
+        System.out.println("2.Operacion de Debito");
+        System.out.println("\n\t0.Salir");
+    }
+
+
 }
