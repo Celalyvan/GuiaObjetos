@@ -46,7 +46,7 @@ public class Banco {
             if (deposit<1){
                 System.out.println("monto no valido");
             }
-        }while (deposit<1); //esta hecho adrede :)
+        }while (deposit<1); //esta hecho adrede :)  // enviar al main
 
         updateBalance(deposit);
 
@@ -68,7 +68,7 @@ public class Banco {
                 System.out.println("fondos insuficientes: $"+ this.balance);
             }
 
-        }while (debit<0 || this.balance<debit);
+        }while (debit<0 || this.balance<debit); // enviar al main
 
         if (debit!=0)
             updateBalance(-1*debit);

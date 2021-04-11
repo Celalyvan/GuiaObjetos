@@ -9,7 +9,7 @@ public class Main {
     public static void main(String[] args) throws InterruptedException {
         Scanner input = new Scanner(System.in);
         int opcion;
-// asd asd
+// asd
 /*      //EJERCICIO 1
 
 
@@ -75,7 +75,7 @@ public class Main {
         }
 */
 
-/*        //Ejercicio 4
+        //Ejercicio 4
         System.out.println("\n\n\t\tBienvenido a bancos Tesacolaplata");
 
         System.out.println("\nCreando nueva cuenta");
@@ -108,9 +108,9 @@ public class Main {
                     break;
             }
         } while (opcion != 0);
-*/
 
-        //Ejercicio 5
+
+  /*      //Ejercicio 5
 
         Hora relos= new Hora(14,4,22);
 
@@ -122,7 +122,7 @@ public class Main {
         }
 
 
-
+*/
 
     }
 
